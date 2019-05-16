@@ -1,3 +1,6 @@
+require('dotenv').config();
+
+
 const config = {
   default: {
     username: process.env.DB_USERNAME,
@@ -9,11 +12,11 @@ const config = {
   },
   development: {
     extend: 'default',
-    database: 'iic2513template_dev',
+    database: 'my_university_dev',
   },
   test: {
     extend: 'default',
-    database: 'iic2513template_test',
+    database: 'my_university_test',
   },
   production: {
     extend: 'default',
