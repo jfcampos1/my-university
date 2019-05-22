@@ -15,7 +15,7 @@ const orm = require('./models');
 // App constructor
 const app = new Koa();
 
-const developmentMode = app.env === 'development';
+const developmentMode = false;
 
 app.keys = [
   'these secret keys are used to sign HTTP cookies',
