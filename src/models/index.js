@@ -6,7 +6,7 @@ const basename = path.basename(module.filename);
 
 const db = {};
 
-const sequelizeConfig = (config.use_env_variable) ? process.env[config.use_env_variable] : config;
+const sequelizeConfig = (config.use_env_variable) ? { process.env[config.use_env_variable], config.dialect, config.username, config.password } : config;
 const sequelize = new Sequelize(sequelizeConfig);
 
 fs
